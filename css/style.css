@@ -1,0 +1,564 @@
+/*-------------------------------------------------------GENERAL-------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: .5vw;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+/*-------------------------------------------------------HEADER-------------------------------------------------------*/
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    z-index: 900;
+    -webkit-box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 9%);
+    box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 9%);
+}
+.isotipo-nav {
+    width: 2.1%;
+    transition: .8s all ease;
+}
+.hamburguesa,
+.close-nav {
+    transition: .8s all cubic-bezier(0.88, -0.02, 0.06, 1.01);
+}
+.hamburguesa {
+    width: 1.2%;
+    position: absolute;
+    right: 1.7%;
+}
+.close-nav {
+    width: 1.2%;
+    position: absolute;
+    right: 1.7%;
+    opacity: 0;
+    pointer-events: none;
+}
+/*-----------PLACA-NAV-----------*/
+.nav-plate {
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 92vh;
+    width: 0%;
+    pointer-events: none;
+    float: right;
+    border-radius: 0 0 0 2.5vh;
+    background-image: url(../img/elements/placanavar.svg);
+    background-repeat: no-repeat;
+    background-size: 202vh;
+    box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 40%);
+    transition: .8s all ease;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    margin-right: 8vw;
+    transition: .8s all ease;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 500;
+    line-height: 2.1vw;
+    transition: .3s all ease;
+}
+.menu a:hover {
+    transform: scale(1.1);
+    color: #dbdbdb;
+}
+.menu a:active {
+    color: #ffc300;
+}
+.nav-plate .logo-mt {
+    position: absolute;
+    width: 55vh;
+    bottom: 0;
+    left: 35vw;
+    opacity: 0;
+    transition: .8s all cubic-bezier(0.5, 0.11, 0.52, 1.02);
+}
+@keyframes flechaB {
+    0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+    }
+    10% {
+        animation-timing-function: ease-in;
+        transform: scale(1.15);
+    }
+    17% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+    33% {
+        animation-timing-function: ease-in;
+        transform: scale(1.2);
+    }
+    45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+}
+.nav-plate .flechaB {
+    position: fixed;
+    width: 25vh;
+    top: 17vh;
+    right: 0;
+    opacity: 0;
+    animation: flechaB 100s ease-in-out 0s infinite normal forwards;
+    transition: 1s all ease;
+}
+/*-------------------------------------------------------INDEX CONTENT-------------------------------------------------------*/
+.logo {
+    position: fixed;
+    width: 10vh;
+    left: 3vw;
+    top: 4.5vw;
+    z-index: -1;
+}
+@keyframes info {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.land-info {
+    position: absolute;
+    height: 94vh;
+    width: 100%;
+    z-index: -1;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info .text {
+    animation: info 2s ease 0s 1 normal forwards;
+    height: 20%;
+}
+.info h1 {
+    font-size: 6.9vh;
+}
+.info h2 {
+    font-size: 5vh;
+}
+/*-----------CARRUSEL-----------*/
+#carrusel-land {
+    width: 100%;
+    height: 44vh;
+}
+#carrusel-land .carousel-item {
+    margin-top: 29vh;
+}
+#carrusel-land .carousel-caption {
+    background-color: #ffffff7a;
+    padding: 3vh 1vw;
+    border-radius: 2vh;
+    -webkit-box-shadow: 0px 7px 11px 3px rgb(0 0 0 / 10%);
+    box-shadow: 0px 7px 11px 3px rgb(0 0 0 / 10%);
+    bottom: 2.8vh;
+}
+#carrusel-land .carousel-caption h5 {
+    font-size: 2.5vh;
+}
+#carrusel-land .carousel-caption p {
+    font-size: 2vh;
+}
+#carrusel-land .carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    width: 1.3vw;
+    height: .5vh;
+    padding: 0;
+    margin-right: .1vw;
+    margin-left: .1vw;
+}
+/*--------------*/
+.ver-mas {
+    background-color: #ffc300;
+    border: none;
+    border-radius: .8vw;
+    padding: .5vh 1vw;
+    font-size: 1.7vh;
+    font-weight: 500;
+    transition: .3s all ease;
+    -webkit-box-shadow: 0px 7px 11px 3px rgb(0 0 0 / 8%);
+    box-shadow: 0px 7px 11px 3px rgb(0 0 0 / 9%);
+}
+.ver-mas:hover {
+    padding: .5vh 1.5vw;
+    background-color: rgb(112, 96, 3);
+    color: white;
+}
+/*-------------------------------------------------------INDEX FONDO-------------------------------------------------------*/
+/**/
+@keyframes flechaAnim {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0) scale(1);
+    }
+    15% {
+        transform: translateY(-30px) rotate(-6deg);
+    }
+    30% {
+        transform: translateY(15px) rotate(6deg);
+    }
+    45% {
+        transform: translateY(-15px) rotate(-3.6deg) scale(1.2);
+    }
+    60% {
+        transform: translateY(9px) rotate(2.4deg);
+    }
+    75% {
+        transform: translateY(-6px) rotate(-1.2deg);
+    }
+}
+.flechaIzq {
+    position: fixed;
+    width: 15vw;
+    bottom: 8vh;
+    left: -1vw;
+    z-index: -1 !important;
+    pointer-events: none;
+    animation: flechaAnim 150s cubic-bezier(0.45, 0.08, 0.28, 1.01) 0s infinite normal forwards;
+}
+.elm1,
+.elm2,
+.elm3,
+.elm4,
+.elm5,
+.elm6,
+.elm7,
+.elm8,
+.elm9,
+.elm10,
+.elm11,
+.elm12 {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+}
+/*-----------CIRCULO-----------*/
+@keyframes circulo {
+    0% {
+        transform: translateY(0vw);
+    }
+    100% {
+        transform: translateY(-4vw);
+    }
+}
+.elm1 {
+    top: 20vh;
+    width: 26vh;
+    right: -3vw;
+    animation: circulo 10s ease-in-out 0s infinite alternate forwards;
+}
+/*-----------ELEMENTOS-----------*/
+@keyframes elementsAnim1 {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+    100% {
+        transform: translateY(0) translateX(9vw) rotate(0);
+    }
+    15% {
+        transform: translateY(-30px) translateX(2vw) rotate(-6deg);
+    }
+    30% {
+        transform: translateY(15px) translateX(7vw) rotate(6deg);
+    }
+    45% {
+        transform: translateY(-15px) translateX(3vw) rotate(-3.6deg);
+    }
+    60% {
+        transform: translateY(9px) translateX(9vw) rotate(2.4deg);
+    }
+    75% {
+        transform: translateY(-6px) translateX(5vw) rotate(-1.2deg);
+    }
+}
+.elm2 {
+    top: 50vh;
+    width: 26vh;
+    right: -1vw;
+    animation: elementsAnim1 150s ease-in-out 0s infinite alternate forwards;
+}
+@keyframes elementsAnim2 {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+    100% {
+        transform: translateY(0) translateX(2vw) rotate(0);
+    }
+    15% {
+        transform: translateY(-30px) translateX(1vw) rotate(-6deg);
+    }
+    30% {
+        transform: translateY(15px) translateX(3vw) rotate(6deg);
+    }
+    45% {
+        transform: translateY(-15px) translateX(0vw) rotate(-3.6deg);
+    }
+    60% {
+        transform: translateY(9px) translateX(3vw) rotate(2.4deg);
+    }
+    75% {
+        transform: translateY(-6px) translateX(1vw) rotate(-1.2deg);
+    }
+}
+.elm3 {
+    top: 58vh;
+    width: 18vh;
+    right: -1vw;
+    animation: elementsAnim2 150s ease-in-out 0s infinite alternate forwards;
+}
+@keyframes elementsAnim3 {
+    0% {
+        transform: translateY(0) translateX(6vw) rotate(0);
+    }
+    100% {
+        transform: translateY(0) translateX(1vw) rotate(0);
+    }
+    15% {
+        transform: translateY(-30px) translateX(7vw) rotate(-6deg);
+    }
+    30% {
+        transform: translateY(15px) translateX(2vw) rotate(6deg);
+    }
+    45% {
+        transform: translateY(-15px) translateX(0vw) rotate(-3.6deg);
+    }
+    60% {
+        transform: translateY(9px) translateX(9vw) rotate(2.4deg);
+    }
+    75% {
+        transform: translateY(-6px) translateX(4vw) rotate(-1.2deg);
+    }
+}
+.elm4 {
+    top: 65vh;
+    width: 36vh;
+    right: -1vw;
+    animation: elementsAnim3 150s ease-in-out 0s infinite alternate forwards;
+}
+@keyframes elementsAnim {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0) scale(1);
+    }
+    15% {
+        transform: translateY(-30px) rotate(-6deg);
+    }
+    30% {
+        transform: translateY(15px) rotate(6deg);
+    }
+    45% {
+        transform: translateY(-15px) rotate(-3.6deg) scale(1.2);
+    }
+    60% {
+        transform: translateY(9px) rotate(2.4deg);
+    }
+    75% {
+        transform: translateY(-6px) rotate(-1.2deg);
+    }
+}
+.elm5 {
+    top: 78vh;
+    width: 14vh;
+    right: 11vw;
+    animation: elementsAnim 150s ease-in-out 0s infinite alternate forwards;
+}
+.elm6 {
+    top: 78vh;
+    width: 3.8vh;
+    right: 6vw;
+    animation: elementsAnim 150s ease-in-out 0s infinite alternate forwards;
+}
+.elm7 {
+    top: 78vh;
+    width: 8.3vh;
+    right: -1vw;
+    animation: elementsAnim 150s ease-in-out 0s infinite alternate forwards;
+}
+.elm8 {
+    top: 85vh;
+    width: 6.3vh;
+    right: -1vw;
+    animation: elementsAnim 150s ease-in-out 0s infinite alternate forwards;
+}
+/*-----------ROMBO-----------*/
+@keyframes rombo {
+    0% {
+        transform: rotate(0) translateY(1.5vh);
+    }
+    100% {
+        transform: rotate(360deg) translateY(-2vh);
+    }
+}
+.elm9 {
+    top: 38vh;
+    width: 5vh;
+    right: 17.3vw;
+    animation: rombo 6s cubic-bezier(0.34, 1.56, 0.64, 1) 0s infinite alternate forwards;
+}
+/*-----------PUNTOS-----------*/
+@keyframes punto1 {
+    0% {
+        transform: translateY(0vh) translateX(0vw);
+    }
+    100% {
+        transform: translateY(-4vh) translateX(-4vw);
+    }
+}
+.elm10 {
+    top: 26vh;
+    width: 1.5vh;
+    right: 24vw;
+    animation: punto1 8s ease-in-out 0s infinite alternate forwards;
+}
+@keyframes punto2 {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(-8vh);
+    }
+}
+.elm11 {
+    top: 59vh;
+    width: 1.5vh;
+    right: 28vw;
+    animation: punto2 8s ease-in-out 0s infinite alternate forwards;
+}
+@keyframes punto3 {
+    0% {
+        transform: translateX(-2vw);
+    }
+    100% {
+        transform: translateX(2vw);
+    }
+}
+.elm12 {
+    top: 92vh;
+    width: 1.5vh;
+    right: 12vw;
+    animation: punto3 8s ease-in-out 0s infinite alternate forwards;
+}
+/*-------------------------------------------------------PAGINA CONTACTO------------------------------------------------------*/
+.row.contacto {
+    position: absolute;
+    z-index: -1;
+    height: 94vh;
+    width: 100%;
+    margin: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 1) 15%, rgba(113, 96, 3, 1) 100%);
+}
+.logo-mitad {
+    position: absolute;
+    z-index: -1;
+    width: 38%;
+    bottom: 0;
+    left: .5vw;
+}
+/*-----------CARRUSEL INFO-----------*/
+#carruselContacto .carousel-item {
+    height: 30vh;
+}
+#carruselContacto  .carousel-caption h5 {
+    font-size: 4vh;
+    text-align: initial;
+}
+/*-----------FORMULARIO-----------*/
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff47;
+    height: 57vh;
+    width: 18vw;
+    padding: 0 2vw;
+    border-radius: .4vw;
+    justify-content: center;
+}
+#formulario label {
+    color: #fff;
+    font-size: 1.7vh;
+}
+#formulario input,
+#formulario textarea{
+    outline: none !important;
+    font-size: 1.7vh;
+}
+input#nombre {
+    margin-bottom: 2vw;
+    height: 2vw;
+    border: none;
+    border-radius: .4vw;
+}
+input#correo {
+    margin-bottom: 2vw;
+    height: 2vw;
+    border: none;
+    border-radius: .4vw;
+}
+textarea#mensaje {
+    border: none;
+    border-radius: .4vw;
+    resize: none;
+    height: 12vh;
+}
+input#btn-enviar {
+    background-color: #ffc300;
+    border: none;
+    border-radius: .8vw;
+    margin: 5vh 3vw 0vh 3vw;
+    padding: .5vh 1vw;
+    font-size: 1.7vh;
+    font-weight: 500;
+    transition: .3s all ease;
+    -webkit-box-shadow: 0px 7px 11px 3px rgb(0 0 0 / 8%);
+    box-shadow: 0px 7px 11px 3px rgb(0 0 0 / 9%);
+}
+/*-----------HAGAMOS CONTACTO-----------*/
+.logo-hor {
+    position: absolute;
+    width: 10%;
+    top: 7vh;
+}
+.titulo-cont h1 {
+    color: #fff;
+    position: absolute;
+    top: 31vh;
+    width: 10vh;
+    font-size: 3vw;
+}
